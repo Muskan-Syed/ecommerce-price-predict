@@ -73,37 +73,38 @@ const Index = () => {
             
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium mb-2">
+                <label className="block text-sm font-bold mb-2">
                   Catalog Content
                 </label>
                 <Textarea
                   placeholder="Enter product details: name, description, attributes (Gluten-Free, Organic, etc.), pack size, item size in ounces..."
                   value={catalogContent}
                   onChange={(e) => setCatalogContent(e.target.value)}
-                  className="min-h-[200px] resize-none"
+                  className="min-h-[200px] resize-none font-bold"
                 />
-                <p className="text-xs text-muted-foreground mt-2">
+                <p className="text-xs text-muted-foreground mt-2 font-bold">
                   Include: Item Name, Description, Bullet Points, Value & Unit, Attributes, Pack Size
                 </p>
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">
+                <label className="block text-sm font-bold mb-2">
                   Product Image Link
                 </label>
                 <Input
                   placeholder="https://example.com/product-image.jpg"
                   value={imageLink}
                   onChange={(e) => setImageLink(e.target.value)}
+                  className="font-bold"
                 />
-                <p className="text-xs text-muted-foreground mt-2">
+                <p className="text-xs text-muted-foreground mt-2 font-bold">
                   Paste a direct URL to the product image
                 </p>
               </div>
 
               <Button 
                 onClick={handlePredict}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
                 size="lg"
               >
                 <TrendingUp className="w-4 h-4 mr-2" />
@@ -125,25 +126,25 @@ const Index = () => {
                   <div className="text-6xl font-bold text-primary mb-2">
                     ${prediction.price}
                   </div>
-                  <p className="text-sm text-muted-foreground">Predicted Price</p>
+                  <p className="text-sm text-muted-foreground font-bold">Predicted Price</p>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-4 bg-muted/50 rounded-lg">
-                    <span className="text-sm font-medium">Model Confidence</span>
+                    <span className="text-sm font-bold">Model Confidence</span>
                     <span className="text-lg font-bold text-primary">{prediction.confidence}%</span>
                   </div>
 
                   <div className="flex justify-between items-center p-4 bg-muted/50 rounded-lg">
-                    <span className="text-sm font-medium">Price Range</span>
-                    <span className="text-sm font-medium">
+                    <span className="text-sm font-bold">Price Range</span>
+                    <span className="text-sm font-bold">
                       ${(prediction.price * 0.9).toFixed(2)} - ${(prediction.price * 1.1).toFixed(2)}
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center p-4 bg-muted/50 rounded-lg">
-                    <span className="text-sm font-medium">Market Position</span>
-                    <Badge variant="secondary">Competitive</Badge>
+                    <span className="text-sm font-bold">Market Position</span>
+                    <Badge variant="secondary" className="font-bold">Competitive</Badge>
                   </div>
                 </div>
               </div>
@@ -152,7 +153,7 @@ const Index = () => {
                 <div className="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <TrendingUp className="w-16 h-16 text-primary/40" />
                 </div>
-                <p className="text-muted-foreground max-w-sm">
+                <p className="text-muted-foreground max-w-sm font-bold">
                   Enter product details and click "Predict Price" to see AI-powered pricing
                 </p>
               </div>
