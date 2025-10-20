@@ -43,7 +43,7 @@ const Index = () => {
           <p 
             className="text-xl font-medium max-w-4xl mx-auto"
             style={{
-              background: 'linear-gradient(135deg, hsl(280 50% 30%), hsl(320 50% 25%))',
+              background: 'linear-gradient(135deg, hsl(280 60% 15%), hsl(320 60% 12%))',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
