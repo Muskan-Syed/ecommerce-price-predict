@@ -31,9 +31,9 @@ const Index = () => {
       
       <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="text-center mb-12 space-y-6">
-          <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
+          <Badge variant="secondary" className="mb-4 bg-primary/10 border-primary/20">
             <Sparkles className="w-3 h-3 mr-1" />
-            Powered by Advanced ML Models
+            <span className="text-purple-900 font-semibold">Powered by Advanced DL Models</span>
           </Badge>
           
           <h1 className="text-6xl font-bold text-foreground mb-4">
@@ -63,7 +63,9 @@ const Index = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          <Card className="p-6 backdrop-blur-sm bg-card/80 shadow-xl">
+          <Card className="p-6 backdrop-blur-sm shadow-xl" style={{
+            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(243, 232, 255, 0.7))'
+          }}>
             <div className="flex items-center gap-2 mb-6">
               <Sparkles className="w-5 h-5 text-primary" />
               <h2 className="text-2xl font-bold">Product Details</h2>
@@ -110,7 +112,9 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-6 backdrop-blur-sm bg-card/80 shadow-xl">
+          <Card className="p-6 backdrop-blur-sm shadow-xl" style={{
+            background: 'linear-gradient(135deg, rgba(253, 242, 248, 0.8), rgba(255, 255, 255, 0.9))'
+          }}>
             <h2 className="text-2xl font-bold mb-6">
               {prediction ? 'Price Prediction' : 'Awaiting Prediction'}
             </h2>
